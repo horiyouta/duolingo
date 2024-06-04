@@ -430,6 +430,7 @@ canvas.setCallBack(data => {
 
 canvas.set_Undo_Redo(true, true);
 canvas.cxt.canvas.addEventListener(`mousedown`, () => { check.classList.add(`okc`) });
+canvas.cxt.canvas.addEventListener(`touchstart`, () => { check.classList.add(`okc`) });
 canvas.cxt.canvas.addEventListener(`mouseleave`, () => {
     canvas.setOptions({ language: 'ja' });
     canvas.recognize();
