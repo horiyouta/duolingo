@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duolingo</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="https://d35aaqx5ub95lt.cloudfront.net/favicon.ico">
+</head>
+
+<body>
+    <div id="inStage">
+        <div id="quesDiv">
+            <div id="progressDiv">
+                <img src="./data/back.svg" alt="" id="back">
+                <progress value="0" id="prog"></progress>
+            </div>
+            <div id="mainDiv">
+                <p id="question"></p>
+                <div id="quesField">
+                    <div id="charaDiv">
+                        <img src="" alt="" id="chara">
+                    </div>
+                    <div id="textField">
+                        <svg id="svg" height="20" viewBox="0 0 18 20" width="18"
+                            style="--web-ui_speech-bubble-alignment: 38.5px;">
+                            <path id="path1"
+                                d="M2.00358 19.0909H18V0.909058L0.624575 15.9561C-0.682507 17.088 0.198558 19.0909 2.00358 19.0909Z">
+                            </path>
+                            <path id="path2" clip-rule="evenodd"
+                                d="M18 2.48935V0L0.83037 15.6255C-0.943477 17.2398 0.312833 20 2.82143 20H18V18.2916H2.82143C1.98523 18.2916 1.56646 17.3716 2.15774 16.8335L16.1228 4.12436L18 2.48935Z"
+                                fill-rule="evenodd"></path>
+                        </svg>
+                        <p id="quesText"></p>
+                    </div>
+                </div>
+                <div id="sortQues">
+                    <div class="field">
+                        <span class="put" id="last"></span>
+                    </div>
+                    <div id="margin"></div>
+                    <div id="choicesDiv"></div>
+                </div>
+                <div id="choiceQues"></div>
+                <div id="typeQues">
+                    <textarea name="typeArea" id="typeArea"></textarea>
+                </div>
+                <div id="karutaQues">
+                    <div class="karutaDiv"></div>
+                    <div class="karutaDiv"></div>
+                </div>
+                <div id="hwQues">
+                    <canvas id="hwCanvas" width="600" height="200"></canvas>
+                    <p id="clear">CLEAR</p>
+                </div>
+            </div>
+        </div>
+        <div id="winDiv">
+            <img src="./data/duo.svg" alt="">
+            <p>Lesson Complete</p>
+        </div>
+        <div class="btnDiv">
+            <div id="bdDis">
+                <div id="result">
+                    <div id="ciDiv">
+                        <img id="ci" src="./data/okc.svg">
+                    </div>
+                    <div id="ngd">
+                        <h2 id="ngt">Correct solution:</h2>
+                        <p id="ngs"></p>
+                    </div>
+                </div>
+                <p class="check">CHECK</p>
+            </div>
+        </div>
+    </div>
+    <div id="outStage">
+        <div class="lesson"></div>
+        <div class="lesson left ul"></div>
+        <div class="lesson ul"></div>
+        <div class="lesson right ul"></div>
+        <div class="lesson ul"></div>
+        <div id="descDiv"><div id="dot"></div><div id="desc"><p id="lProg"></p><p id="lBtn">START</p></div></div>
+    </div>
+    <script src="https://kanji.reader.bz/tegaki/handwriting.canvas.js"></script>
+    <script src="./data.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
