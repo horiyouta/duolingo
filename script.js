@@ -52,6 +52,7 @@ const winSe = new Audio(`./data/win.wav`);
 let fieldPlaces = [];
 let answer = [];
 let quesList = [];
+let algorithm = 0;
 let nowStage = 0;
 let nowLevel = 0;
 let quesId = 0;
@@ -336,7 +337,10 @@ const checkQues = () => {
             outStage.style.display = ``;
         } else {
             edit = true;
-            if (check.classList.contains(`ngc`)) quesList.push(quesList[quesId]);
+            if (check.classList.contains(`ngc`)) {
+                if (algorithm == 2) quesList.splice(quesId + 1, 0, quesList[quesId]);
+                else quesList.push(quesList[quesId]);
+            }
             btnDiv.classList.remove(`correct`);
             btnDiv.classList.remove(`wrong`);
             check.classList.remove(`ngc`);
@@ -387,7 +391,7 @@ back.addEventListener(`click`, () => {
 });
 
 lBtn.addEventListener(`click`, () => {
-    const algorithm = data[stage][stage == nowStage ? nowLevel : 2][0];
+    algorithm = data[stage][stage == nowStage ? nowLevel : 2][0];
     nowData = data[stage][stage == nowStage ? nowLevel : 2];
     nowData = nowData.slice(1, nowData.length);
     inLesson = true;
