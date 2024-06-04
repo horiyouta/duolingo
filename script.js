@@ -435,6 +435,10 @@ canvas.cxt.canvas.addEventListener(`mouseleave`, () => {
     canvas.setOptions({ language: 'ja' });
     canvas.recognize();
 });
+canvas.cxt.canvas.addEventListener(`touchend`, () => {
+    canvas.setOptions({ language: 'ja' });
+    canvas.recognize();
+});
 clearBtn.addEventListener(`click`, () => {
     canvas.erase()
     check.classList.remove(`okc`);
